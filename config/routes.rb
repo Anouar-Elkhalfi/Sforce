@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get 'articles/index'
-  root 'articles#index'  # Définit la page d'accueil qui liste les articles
+  devise_for :users  # Assurez-vous que cette ligne existe si vous utilisez Devise
+  root 'articles#index'
+  resources :articles, only: [:index, :show]  # Ajouter 'show' ici
 end

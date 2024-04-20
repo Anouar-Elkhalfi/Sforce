@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users  # Assurez-vous que cette ligne existe si vous utilisez Devise
-  root 'articles#index'
-  resources :articles, only: [:index, :show]  # Ajouter 'show' ici
+  devise_for :users
+  root 'articles#index'  # Définit la page d'accueil pour afficher l'index des articles
+  resources :articles, only: [:show, :new, :create, :index]  # Assurez-vous que les autres actions nécessaires sont aussi routées
 end

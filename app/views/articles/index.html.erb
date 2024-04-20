@@ -1,8 +1,7 @@
-<h1>Articles</h1>
+<h1>Welcome to My Blog</h1>
 <% @articles.each do |article| %>
   <div>
     <h2><%= article.title %></h2>
-    <p><%= article.body.truncate(150) %></p>
+    <p><%= article.body %></p>
   </div>
 <% end %>
-
